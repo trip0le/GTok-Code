@@ -1,0 +1,407 @@
+*{
+    box-sizing: border-box;
+    /* background: whitesmoke; */
+}
+
+.App {
+    /* width: 100vw;
+    height: 100vh; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: whitesmoke;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.Navbar {
+    background-color: tomato;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.Navbar .leftSide{
+    flex: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.Navbar .leftSide .links {
+    max-height: 80px;
+}
+
+.Navbar .leftSide .links a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+.Navbar .leftSide button {
+    display: none;
+    margin-left: 20px;
+}
+
+.Navbar .leftSide #hidden {
+    display: flex;
+}
+
+.Navbar .rightSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+
+.Navbar .rightSide a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .Navbar .leftSide button {
+        display: flex;
+    }
+
+    .Navbar .leftSide .links {
+        display: none;
+    }
+
+    .Navbar .leftSide #hidden {
+        position: absolute;
+        left: 0;
+        top: 80px;
+        max-height: 230px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        width: 100%;
+        background-color: tomato;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+    }
+}
+
+.Navbar .leftSide .links a:hover {
+    color: yellowgreen;
+    transition: 0.5s ease-in-out;
+}
+
+.Navbar .leftSide #hidden a{
+    margin-bottom: 50px;
+}
+
+
+.box {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    transform: translateY(-50%, -50%);
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    
+}
+
+.box:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    transition: 0.5s ease-in;
+}
+
+
+.box .content h1{
+    margin: auto;
+}
+
+.box .content a {
+    position: relative;
+    padding: 12px  20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: tomato;
+    border-radius: 15px;
+    color: white;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.box .content a:hover {
+    background: yellowgreen;
+}
+
+.middle {
+    margin-top: 670px;
+    display: flex;
+    min-height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.middle .card {
+    align-items: center;
+    position: relative;
+    min-width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+                inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.5);
+                border-radius: 15px;
+                margin: 30px;
+
+}
+
+.middle .card .box1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.middle .card .box1 .content1 {
+    padding: 20px;
+    text-align: center;
+}
+
+.container .card .box1 .content1 h2 {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8rem;
+    color: rgba(0, 0, 0, 0.02);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.container .card:hover .box1 .content1 h2{
+    color: rgba(0, 0, 0, 0.05);
+}
+
+.container .card .box1 .content1 h3 {
+    font-size: 1.1em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container .card .box1 .content1 p {
+    font-size: 1em;
+    font-weight: 300;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container .card .box1 .content1 a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: tomato;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.container .card:hover .box1 .content1 a {
+    background: yellowgreen;
+}
+
+.container .card:hover .box1 {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, tomato, yellowgreen);
+}
+
+.container .card:hover .box1 .content1 h3 {
+    color: #fff;
+}
+
+.bottom {
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom h1 {
+    padding-bottom: 10px;
+    text-align: center;
+    color: purple;
+}
+
+.bottom  img {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.bottom a{
+    position: relative;
+    padding: 12px  20px;
+    margin-left: 80px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: tomato;
+    border-radius: 15px;
+    color: white;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    display: inline-block;
+}
+
+.bottom a:hover {
+    background: yellowgreen;
+}
+
+.contact-form {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.contact-form {
+    width: 85%;
+    max-width: 600px;
+    background: #f1f1f1;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%, -50%);
+    padding: 30px 40px;
+    box-sizing: border-box;
+    margin-left: -230px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 20px #000000b3;
+}
+
+.contact-form h1 {
+    margin-top: 0;
+    font-weight: 200;
+}
+
+.txtb {
+
+    border: 1px solid gray;
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+.txtb label {
+    display: block;
+    text-align: left;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.txtb input, .txtb textarea{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    margin-top: 6px;
+}
+
+.btn {
+    display: inline-block;
+    background: tomato;
+    padding: 14px 0;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+}
+
+.btn:hover {
+    background: yellowgreen;
+}
+
+footer {
+    background: #111;
+    height: auto;
+    padding-top: 40px;
+    color: #fff;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5 ease-in-out;
+}
+
+.socials a:hover {
+    color: yellowgreen;
+} 
+
+.footer-bottom p{
+    text-align: center;
+    padding-bottom: 30px;
+}
